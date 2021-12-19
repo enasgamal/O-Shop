@@ -1,0 +1,11 @@
+<div class="row g-0">
+    <div class="col-2">
+        <button class="btn btn-secondary w-100" (click)="removeFromCart(product)" >-</button>
+    </div>
+    <div class="col text-center">
+        <button class="btn btn-primary w-100">{{shoppingCart.getQuantity(product)}} in cart</button>
+    </div>
+    <div class="col-2 ">
+        <button class="btn btn-secondary w-100" (click)="addToCart(product)">+</button>
+    </div>
+</div>

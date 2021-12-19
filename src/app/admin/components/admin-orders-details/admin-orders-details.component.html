@@ -1,0 +1,37 @@
+<div class="card mt-4">
+    <div class="card-body">
+        <h2 class="card-title"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black"
+                class="bi bi-cart3 " viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg> &nbsp; Order Details</h2>
+        <p class="card-text">you have {{orderData.length}} items in cart.</p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item py-3" *ngFor="let item of orderData">
+                {{item.quantity}} x {{item.product.title}}
+                <div class="float-end">{{item.totalPrice}} $</div>
+            </li>
+        </ul>
+    </div>
+    <div class="card-footer">
+
+        <h2 class="card-title"> <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                clip-rule="evenodd">
+                <path
+                    d="M3 18h-2c-.552 0-1-.448-1-1v-2h15v-9h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.121-.728 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-6c0 1.656-1.344 3-3 3s-3-1.344-3-3zm3-1.2c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm12 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-4-2.8h-14v-10c0-.552.448-1 1-1h12c.552 0 1 .448 1 1v10zm3-6v3h4.715l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.42z" />
+            </svg>&nbsp;
+            Delivery Details</h2>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item py-3">
+                Name: {{shippingData.name}}
+            </li>
+            <li class="list-group-item py-3">
+                City: {{shippingData.city}}
+            </li>
+            <li class="list-group-item py-3">
+                Address: {{shippingData.addressLine1}} - {{shippingData.addressLine2}}
+            </li>
+        </ul>
+
+    </div>
+</div>

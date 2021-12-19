@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-2 mt-5">
+        <product-filter [category]="category"></product-filter>
+    </div>
+
+    <div class="col-md-9">
+        <div class="row">
+            <div *ngFor="let category of filteredProducts ; let i = index"  class="col-md-4 ">
+               <product-card [product]="category" [shoppingCart]="cart"></product-card>
+            </div>
+        </div>
+    </div>
+</div>

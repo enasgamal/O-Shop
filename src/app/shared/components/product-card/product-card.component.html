@@ -1,0 +1,15 @@
+<div class="card mt-5 mr-5" >
+    <img class="card-img-top" [src]="product.payload.val().imgUrl"
+        *ngIf="product.payload.val().imgUrl">
+    <div class="card-body">
+        <h5 class="card-title">{{ product.payload.val().title }}</h5>
+        <p class="card-text">{{product.payload.val().price}} $</p>
+    </div>
+    <div class="card-footer" *ngIf="shoppingCart">
+        <button class="btn btn-primary w-100" *ngIf="shoppingCart.getQuantity(product) === 0 ; else updatedQuantity "
+        (click)="addToCart(product)">Add to card</button>
+    </div>
+    <ng-template #updatedQuantity>
+       <product-quantity [product]="product" [shoppingCart]="shoppingCart"></product-quantity>
+    </ng-template>
+</div>

@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+/* @import "~font-awesome/css/font-awesome.css"; */
+
+
+.sticky-top{
+    top: 70px;
+}
+.navbar-light .navbar-brand {
+    color: #c1d62e;
+}
+.list-group-item.active{
+    background-color: #c1d62e;
+    border-color: #c1d62e;
+}
+.form-control:focus {
+    border-color: #c1d62e;
+    box-shadow: 0 0 0 0.05rem #c1d62e;
+  }
+.btn-right{
+    float: right !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

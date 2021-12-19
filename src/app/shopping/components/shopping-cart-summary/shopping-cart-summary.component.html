@@ -1,0 +1,17 @@
+<div class="card mt-4" >
+    <div class="card-body">
+      <h5 class="card-title">Order Summary</h5>
+      <p class="card-text">you have {{cart.totalItemsCount}} items in cart.</p>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item py-3" *ngFor="let item of cart.items">
+              {{item.quantity}} x {{item.product.title}}
+              <div class="float-end">{{item.totalPrice}} $</div>
+          </li>
+          <li class="list-group-item py-3 fw-bold">
+              Total
+              <div class="float-end">{{cart.totalPriceQuantity}} $</div>
+          </li>
+         
+      </ul>
+    </div>
+  </div>
